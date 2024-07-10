@@ -4,7 +4,11 @@ const PORT = 8080 || 3030
 const app = express()
 
 app.get("/users", (req, res) => {
-    res.json({ message: "GET"})
+    res.json({ message: [
+        "João Gomes",
+        "José Camoes",
+        "Adelia De Jesus"
+    ]})
 })
 
 app.post("/users", (req, res) => {
@@ -17,6 +21,14 @@ app.delete("/users", (req, res) => {
 
 app.patch("/users", (req, res) => {
     res.status(200).json({ message: "PATCH"})
+})
+
+app.put("/users", (req, res) => {
+    res.json({ message: [
+        "João Gomes",
+        "José Camoes",
+        "Adelia De Jesus"
+    ]})
 })
 
 app.listen(PORT, () => {
