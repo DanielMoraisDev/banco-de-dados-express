@@ -21,7 +21,7 @@ const sendNameRoutes = (req, res) => {
     return nameRoute
 }
 
-app.use(express())
+app.use(express.json())
 app.use(logRoutes)
 connectDB()
 
