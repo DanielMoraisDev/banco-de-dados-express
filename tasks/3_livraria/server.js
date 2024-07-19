@@ -386,6 +386,24 @@ app.put("/funcionarios/:id", (req, res) => {
       return;
     }
 
+    const checkEmailSql = /*sql*/ `
+      SELECT * FROM funcionarios
+        WHERE email != "${email}" AND 
+        id != "${id}"
+      `
+
+    conn.query(checkEmailSql, (err, data) => {
+      if (err) {
+        res.status(500).json({ message: "Erro ao verificar email" });
+        return console.log("[FUNCIONARIOS PUT FAIL] " + err);
+      }
+
+      if (data.length > 0) {
+        res.status(500).json({ message: "Email já está sendo utilizado por outro funcionário" });
+        return console.log("[FUNCIONARIOS PUT FAIL] " + err);
+      }
+    })
+
     const updateSql = /*sql*/ `
     UPDATE funcionarios 
     SET nome = "${nome}",
