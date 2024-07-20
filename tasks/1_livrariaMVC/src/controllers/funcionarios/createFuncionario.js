@@ -1,3 +1,4 @@
+import { v4 as generateID } from "uuid"
 import conn from "../../config/conn.js";
 
 const createFuncionario = (req, res) => {

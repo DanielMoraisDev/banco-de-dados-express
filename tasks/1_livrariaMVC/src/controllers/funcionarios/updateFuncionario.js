@@ -31,7 +31,7 @@ const updateFuncionario = (req, res) => {
 
   const sql = /*sql*/ `
     SELECT * FROM funcionarios 
-    WHERE id = "${id}" AND email != "${email}"
+    WHERE id = "${id}"
   `;
 
   conn.query(sql, (err, data) => {
@@ -74,7 +74,7 @@ const updateFuncionario = (req, res) => {
 
     conn.query(updateSql, (err) => {
       if (err) {
-        console.log("[LIVROS PUT FAIL] " + err);
+        console.log("[FUNCIONARIOS PUT FAIL] " + err);
         res.status(500).json({ message: "Erro ao atualizar funcionario" });
       }
 

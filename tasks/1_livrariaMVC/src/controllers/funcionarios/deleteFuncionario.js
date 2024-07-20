@@ -1,4 +1,4 @@
-import { conn } from "../../../../3_livraria/db/conn";
+import conn from "../../config/conn.js";
 
 const deleteFuncionario = (req, res) => {
   const { id } = req.params;

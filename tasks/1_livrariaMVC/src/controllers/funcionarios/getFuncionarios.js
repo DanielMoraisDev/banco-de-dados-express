@@ -9,9 +9,9 @@ const getFuncionarios = (req, res) => {
         return console.log("[FUNCIONARIO GET FAIL]" + err);
       }
   
-      const livros = data;
-      console.log(typeof livros);
-      res.json({ message: sendNameRoutes(req, res), livros });
+      const funcionarios = data;
+      console.log(typeof funcionarios);
+      res.json({ message: funcionarios });
     })
 };
 
