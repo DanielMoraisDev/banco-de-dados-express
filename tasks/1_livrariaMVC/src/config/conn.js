@@ -14,10 +14,7 @@ conn.connect((err) => {
         return console.log(err.stack)
     }
 
-    console.log("Musql conectado com sucess")
-
-
+    console.log("Mysql conectado com sucesso")
 })
-
 
 export default conn;
