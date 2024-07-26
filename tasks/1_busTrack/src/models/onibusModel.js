@@ -9,8 +9,8 @@ const tableOnibus = /*sql*/ `
         modelo VARCHAR(255) NOT NULL,
         ano_fabricacao YEAR(4) NOT NULL,
         capacidade INT(5) NOT NULL,
-        id_linha VARCHAR(60) NOT NULL,
-        id_motorista VARCHAR(60) NOT NULL,
+        id_linha VARCHAR(60),
+        id_motorista VARCHAR(60),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 

@@ -4,7 +4,7 @@ import linhasDeOnibusController from "../controllers/linhas_de_onibus/linhasDeOn
 
 const router = Router()
 
-router.post("/criar", (req, res) => {
+router.post("/", (req, res) => {
     return linhasDeOnibusController.createLinhaDeOnibus(req, res)
 })
 
